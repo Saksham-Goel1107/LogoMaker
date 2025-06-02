@@ -7,6 +7,7 @@ import LogoDesc from './_components/LogoDesc'
 import LogoPallet from './_components/LogoPallet'
 import LogoIdea from './_components/LogoIdea'
 import LogoDesigns from './_components/LogoDesigns'
+import PricingModel from './_components/PricingModel'
 
 const CreateLogo = () => {
   const [Step, setStep] = React.useState(1)
@@ -42,6 +43,8 @@ const CreateLogo = () => {
           <LogoDesigns onHandleInputChange={(v) => onHandleInputChange('design', v)} formData={formData}/> : 
          Step == 5 ? 
           <LogoIdea onHandleInputChange={(v) => onHandleInputChange('idea', v)} formData={formData}/> : 
+         Step == 6?
+          <PricingModel onHandleInputChange={(v) => onHandleInputChange('pricing', v)} formData={formData}/> :
          null
         }
         <div className='flex items-center justify-between gap-4 border-t pt-4'>
